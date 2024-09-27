@@ -1,4 +1,15 @@
-
+Arabic-Stopwords 
+transformers
+Tashaphyne
+emoji
+openpyxl
+googletrans
+deep_translator
+unidecode 
+emoji 
+aiogoogletrans 
+torchmetrics
+pytorch_lightning
 
 
 
