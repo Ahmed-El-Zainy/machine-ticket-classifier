@@ -8,8 +8,17 @@ This repository contains a project focused on building a machine learning classi
 
 ### The primary objectives of this project are:
 <details>
-  <summary><b>1. Data Processing</b></summary>
-  Implement a strategy to generate labels from the text data. The labels should reflect key discrepancies or noteworthy information derived from the "Request Detail" and "Notes" fields.
+  <summary><b>1. Data Processing: Implement a strategy to generate labels from the text data. The labels should reflect key discrepancies or noteworthy information derived from the "Request Detail" and "Notes" fields.</b></summary>
+  Techniques:
+  - Remove Null values
+  - Remove Duplicate values
+  - Remove Special Characters
+  - Remove Punctuations
+  - Remove Numbers
+  - Remove Arabic Stop Words
+  - Remove English Stop Words
+  - Remove Whitespace
+  
 </details>
 
 <details>
