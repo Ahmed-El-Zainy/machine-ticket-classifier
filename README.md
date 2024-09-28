@@ -62,33 +62,42 @@ This repository contains a project focused on building a machine learning classi
   Implement a strategy to generate labels from the text data. The labels should reflect key discrepancies or noteworthy information derived from the "Request Detail" and "Notes" fields. Utilize techniques such as fuzzy matching, keyword extraction, Zero-shot classification, Few-shot classification and manual annotation where necessary.
 </details>
 
-<details>
-  <summary><b>6. Text Classification</b></summary>
-  Develop a machine learning model to classify the labeled data, ensuring high accuracy and relevance. Experiment with different classification models such as logistic regression, support vector machines, and deep learning models to find the best fit.
-</details>
 
+<summary><b>6. Text Classification with Model Evolution</b></summary>
+    Models:
 
+    1.model_name ="CAMeL-Lab/bert-base-arabic-camelbert-ca-poetry"
+    Trained Text is A Combination fo Notes After transalte the needed infotmation from it , and Request Details
+    Classes: label_list_HARD = ['Hardware Issue', 'Network Problem', 'Software Problem', 'Power Supply Issue', 'Peripheral Issue']
+<img src="asset/arabic_CAmel_poetrymode.png">
+
+    pipe("نفيد سعادتكم بوجود مشكله جهاز عياده العظام الدخول وفتح الجهاز بيوزر موظف نوع الجهاز رقم الجهاز برجاء الاطلاع وتوجيه المختصين ليدكم لحل المشكله ولكم جزيل الشكر مدير تقنيه المعلومات بمستشفي السليل العام منصور عبدالله الحابي تنبيه باخلاء المسءوليه ومرفقاتها معده لاستخدام اليه بالرساله فقط تحتوي سريه محميه قانونيا تكن الشخص فانه يمنع منعا باتا عرض نشر استخدام مصرح للمحتوي اخطار الالكتروني واتلاف النسخ الموجوده لديك تعد التصريحات الاراء بالمرسل تمثل تتحمل مسءوليه الاضرار الناتجه فيروسات تحملها")
+    Results: 
+    [[{'label': 'Hardware Issue', 'score': 0.013072000816464424},
+    {'label': 'Network Problem', 'score': 0.009265456348657608},
+    {'label': 'Software Problem', 'score': 0.01583610288798809},
+    {'label': 'Power Supply Issue', 'score': 0.9559705257415771},
+    {'label': 'Peripheral Issue', 'score': 0.005855914205312729}]]
+    
+Add K-fold Training Steps:
+<img src="asset/kfold_results.png">
+<img src="asset/newplot.png">
+
+------------------------------
+    2.model_name="asafaya/bert-mini-arabic"
+    Trained Text is A Combination fo Notes After transalte the needed infotmation from it , and Request Details
+    Classes: label_list_HARD = ['Hardware Issue', 'Network Problem', 'Software Problem', 'Power Supply Issue', 'Peripheral Issue']
+<img src="asset/mini_arabert.png">
+-----------------------------
 <details>
   <summary><b>7. Model Evaluation</b></summary>
   Assess the performance of the model using standard evaluation metrics such as accuracy, F1-score, precision, and recall. Compare the predictions against a validation set of manually labeled data to measure the effectiveness of the model.
 </details>
 
-### Key Features
 
-<details>
-  <summary><b>1. Automated Labeling</b></summary>
-  Utilizes custom algorithms and techniques such as fuzzy matching, keyword extraction, and semantic analysis to generate labels for the text data. This helps in the efficient categorization of unstructured data and reduces manual effort.
-</details>
 
-<details>
-  <summary><b>2. NLP Techniques</b></summary>
-  Implements preprocessing steps like tokenization, stop-word removal, and word embeddings to handle the complexity of Arabic and English text. These techniques enable the extraction of meaningful features from the text, facilitating better model performance.
-</details>
 
-<details>
-  <summary><b>3. Model Evaluation</b></summary>
-  Employs metrics such as accuracy, F1-score, precision, and recall to validate the model's effectiveness in text classification. Detailed performance reports are generated to guide further improvements and refinements in the model.
-</details>
+
 ### Project Structure
 
 - `data/`: Contains the dataset (pre-labeled and raw).
