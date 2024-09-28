@@ -1,4 +1,4 @@
-Arabic-Stopwords 
+Arabic-Stopwords
 transformers
 Tashaphyne
 emoji
