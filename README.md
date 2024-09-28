@@ -11,31 +11,14 @@ This repository contains a project focused on building a machine learning classi
   <summary><b>1. Data Processing: Implement a strategy to generate labels from the text data. The labels should reflect key discrepancies or noteworthy information derived from the "Request Detail" and "Notes" fields.</b></summary>
 
   Techniques:
-  - Drop Unnamed: 0 column and Uneeded columns
-  - Apply Stemming and Lemmatization
-  - Remove Null values
-  - Remove Duplicate values
-  - Apply Arabic normalization
-  - Remove Special Characters
-  - Remove Punctuations
-  - Apply Regular Expression Techniques with Arabic Letters
-  - Remove Numbers
-  - Apply splitting hashtag to words
-  - Remove Arabic Stop Words
-  - Clean hashtag
-  - Remove English Stop Words
-  - Remove emoji
-  - Remove Whitespace
-  - Remove URLs
-  - Remove HTML Tags
-  - Remove Emails
-  - Remove Phone Numbers
-  - Remove Fax Numbers
-  - Remove Tweets
-  - Remove Arabic Numbers
-  - Remove Arabic Diacritics
-  - (Optional) Apply Translation if Columns after cleaning most Values ' ' or empty values
-  
+  - Drop Unnamed: 0 column and Uneeded columns  - Apply Stemming and Lemmatization
+  - Remove Null values - Remove Duplicate values - Apply Arabic normalization - Remove Special Characters
+  - Remove Punctuations - Apply Regular Expression Techniques with Arabic Letters
+  - Remove Numbers - Apply splitting hashtag to words - Remove Arabic Stop Words - Clean hashtag
+  - Remove English Stop Words - (Optional) Remove emoji - Remove Whitespace - Remove URLs
+  - Remove HTML Tags - Remove Emails - Remove Phone Numbers - Remove Fax Numbers 
+  - (Optional) Remove Tweets - Remove Arabic Numbers - Remove Arabic Diacritics - (Optional) Remove Outliers
+  - (Optional) Apply Translation if Columns after cleaning most Values ' ' or empty values 
 </details>
 
 <details>
