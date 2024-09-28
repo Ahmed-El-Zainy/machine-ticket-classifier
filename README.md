@@ -86,12 +86,14 @@ This repository contains a project focused on building a machine learning classi
 Add K-fold Training Steps:
 <img src="asset/kfold_results.png">
 <img src="asset/newplot.png">
+
 ----------------------------------------------------------------------------------------------------------
 
     2.model_name="asafaya/bert-mini-arabic"
     Trained Text is A Combination fo Notes After transalte the needed infotmation from it , and Request Details
     Classes: label_list_HARD = ['Hardware Issue', 'Network Problem', 'Software Problem', 'Power Supply Issue', 'Peripheral Issue']
 <img src="asset/mini_arabert.png">
+
 ----------------------------------------------------------------------------------------------------------
     3.model_name="asafaya/bert-mini-arabic" -> Meduim
     Just Use the Request Details as my main sentences 
