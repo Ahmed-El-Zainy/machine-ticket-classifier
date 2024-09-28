@@ -63,11 +63,15 @@ This repository contains a project focused on building a machine learning classi
 </details>
 
 
-<summary><b>6. Text Classification with Model Evolution</b></summary>
+## 6. Text Classification with Model Evolution
     Models:
+
+----------------------------------------------------------------------------------------------------------
 
     1.model_name ="CAMeL-Lab/bert-base-arabic-camelbert-ca-poetry"
     Trained Text is A Combination fo Notes After transalte the needed infotmation from it , and Request Details
+    Mapping for these Part of Classes using PCA for it wiht kmeans and give a range from 2:20 to get the best 
+    and get the best intria_ at kmean=5
     Classes: label_list_HARD = ['Hardware Issue', 'Network Problem', 'Software Problem', 'Power Supply Issue', 'Peripheral Issue']
 <img src="asset/arabic_CAmel_poetrymode.png">
 
@@ -82,13 +86,24 @@ This repository contains a project focused on building a machine learning classi
 Add K-fold Training Steps:
 <img src="asset/kfold_results.png">
 <img src="asset/newplot.png">
+----------------------------------------------------------------------------------------------------------
 
-------------------------------
     2.model_name="asafaya/bert-mini-arabic"
     Trained Text is A Combination fo Notes After transalte the needed infotmation from it , and Request Details
     Classes: label_list_HARD = ['Hardware Issue', 'Network Problem', 'Software Problem', 'Power Supply Issue', 'Peripheral Issue']
 <img src="asset/mini_arabert.png">
------------------------------
+----------------------------------------------------------------------------------------------------------
+    3.model_name="asafaya/bert-mini-arabic" -> Meduim
+    Just Use the Request Details as my main sentences 
+    Use FuzzyBuzzy Methods for making the classes and choose the nest part of it when number of classes = 9 in addition I balance the classes
+    Classes: label_list_HARD = [Printer Issues, Uncategorized, Miscellaneous, Computer Issues , Network Issues , Maintenance Requests , General Hardware Issues , Peripheral Device Issues , Security Alerts , Job Orders]
+
+----------------------------------------------------------------------------------------------------------
+    3.model_name="asafaya/bert-mini-arabic" -> MEDUIM
+    Use the 
+
+
+
 <details>
   <summary><b>7. Model Evaluation</b></summary>
   Assess the performance of the model using standard evaluation metrics such as accuracy, F1-score, precision, and recall. Compare the predictions against a validation set of manually labeled data to measure the effectiveness of the model.
