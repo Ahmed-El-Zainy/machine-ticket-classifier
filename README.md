@@ -60,42 +60,28 @@ Other subjects with notable counts include '{fig.data[0].x[1]}', '{fig.data[0].x
 
 * Apply PCA to reduce the dimensionality of the data and show the cardinalty of the data
 
-###  3. Dimensionality Reduction
 
-### 4. Feature Engineering
+### 3. Data Labeling
 
-5. Data Labeling</b></summary>
-  Implement a strategy to generate labels from the text data. The labels should reflect key discrepancies or noteworthy information derived from the "Request Detail" and "Notes" fields. Utilize techniques such as fuzzy matching, keyword extraction, Zero-shot classification, Few-shot classification and manual annotation where necessary.
-</details>
-
-<details>
-  <summary><b>6. Text Classification</b></summary>
-  Develop a machine learning model to classify the labeled data, ensuring high accuracy and relevance. Experiment with different classification models such as logistic regression, support vector machines, and deep learning models to find the best fit.
-</details>
+### 4.Text Classification
+#### 5 Classes:
+  ```
+-1 model_name="asafaya/bert-mini-arabic"
+Trained Text is A Combination fo Notes After transalte the needed infotmation from it , and Request Details Classes: label_list_HARD = ['Hardware Issue', 'Network Problem', 'Software Problem', 'Power Supply Issue', 'Peripheral Issue']
+  ```
 
 
-<details>
-  <summary><b>7. Model Evaluation</b></summary>
-  Assess the performance of the model using standard evaluation metrics such as accuracy, F1-score, precision, and recall. Compare the predictions against a validation set of manually labeled data to measure the effectiveness of the model.
-</details>
 
-### Key Features
 
-<details>
-  <summary><b>1. Automated Labeling</b></summary>
-  Utilizes custom algorithms and techniques such as fuzzy matching, keyword extraction, and semantic analysis to generate labels for the text data. This helps in the efficient categorization of unstructured data and reduces manual effort.
-</details>
 
-<details>
-  <summary><b>2. NLP Techniques</b></summary>
-  Implements preprocessing steps like tokenization, stop-word removal, and word embeddings to handle the complexity of Arabic and English text. These techniques enable the extraction of meaningful features from the text, facilitating better model performance.
-</details>
 
-<details>
-  <summary><b>3. Model Evaluation</b></summary>
-  Employs metrics such as accuracy, F1-score, precision, and recall to validate the model's effectiveness in text classification. Detailed performance reports are generated to guide further improvements and refinements in the model.
-</details>
+### 5. Model Evaluation
 
+
+### 6. Conclusion
+In this evaluation, I employed a lightweight model that demonstrated strong performance and is well-suited for deployment in a machine-based ticket support system. While more advanced models like GPT, LLaMA, or GEMMA variants (with over 7 billion parameters) offer higher capacity, they also come with significant computational overhead. For a task of this nature, which primarily involves text classification, such heavy models are not necessary.
+
+The BERT-based models used in this pipeline achieved satisfactory accuracy and evaluation metrics, making them an ideal balance between performance and resource efficiency. Therefore, deploying these lightweight BERT variants provides a practical and cost-effective solution without sacrificing accuracy or reliability in the classification task
 
 ### Project Structure
 ```
@@ -106,7 +92,7 @@ Other subjects with notable counts include '{fig.data[0].x[1]}', '{fig.data[0].x
 - `README.md`: Detailed instructions on how to run the project and interpret the results.
 ```
 s
-### Getting Started
+### 7.Getting Started
 
 1. **Clone the Repository**:
     ```bash
