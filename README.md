@@ -1,10 +1,11 @@
 # Ticketing_system_Task
-[![Open in Colab-AraBert-Meduim-Mini](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1ZRzwdN7C--i8vFADslYDwpkPwQVLUGXb?usp=sharing)
-[![Open in Colab-CAMeL-Lab-Poerty](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1POiN7j0JmJDYupA-Vppr_qg_hNhEZ5A3?authuser=2#scrollTo=IOVdVmfEguAT)
-[![Open in Colab-Llama3.2-1b-instruct](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1DO8EyR_zanXakP_T6Llrv8h68oLOpxiB?usp=sharing)
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1ZRzwdN7C--i8vFADslYDwpkPwQVLUGXb?usp=sharing)
+
 --------------------------------
-## Text-Based LLM Classifier for Unlabeled Data
+## Text-Based Machine Learning Classifier for Unlabeled Data
+
 This repository contains a project focused on building a machine learning classifier for text data. The dataset, provided in the form of an email attachment, includes records with no predefined labels. The goal of the project is to identify and assign meaningful labels based on the content of the "Request Detail" ,  "Notes" fields, "Subject", fields, "Subject_Eng" fields and "Request Type" fields which are predominantly in Arabic, though English may also be present.
+
 --------------------------------
 ### The primary objectives of this project are:
 
@@ -21,40 +22,28 @@ This repository contains a project focused on building a machine learning classi
   - (Optional) Apply Translation if Columns after cleaning most Values ' ' or empty values 
 
 
-  BEFORE-> Cleaning:
+  Before Cleaning:
     df_process["Request Detail"][0]
+    ```
+  *** This is an external email. Be Vigilant and take precautions.***_x000D_*** Do not click links or open attachments or reply unless you recognize the sender and their email address, and you are expecting the email.***_x000D__x000D__x000D_نفيد سعادتكم بوجود مشكله في جهاز عيادة العظام_x000D_حيث انه لا يمكن الدخول وفتح الجهاز بيوزر موظف وزاره الصحة_x000D__x000D_نوع الجهاز : DEEL OPTIPLEX 3080_x000D_رقم الجهاز : DLH0PJ3_x000D__x000D_برجاء الاطلاع وتوجيه المختصين ليدكم لحل المشكلة_x000D__x000D_ولكم جزيل الشكر ،،،،_x000D__x000D__x000D__x000D_مدير تقنية المعلومات بمستشفى السليل العام_x000D_منصور بن عبدالله الحابي_x000D_0556355578_x000D__x000D__x000D_[MANSOUR ABDULLAH AL-HABI (2)]_x000D__x000D__x000D__x000D__x000D__x000D_تنبيه بإخلاء المسئولية: هذه الرسالة ومرفقاتها معدة لاستخدام المُرسَل إليه المقصود بالرسالة فقط و قد تحتوي على معلومات سرية أو محمية قانونيا. إن لم تكن الشخص المقصود، فإنه يُمنع منعا باتا أي عرض أو نشر أو استخدام غير مصرح به للمحتوى. نرجو إخطار المُرسِل عن طريق الرد على هذا البريد الإلكتروني وإتلاف جميع النسخ الموجودة لديك. تعد التصريحات و الآراء المذكورة في الرسالة خاصة بالمُرسِل و لا تمثل وزارة الصحة. كما لا تتحمل الوزارة مسؤولية الأضرار الناتجة عن أي فيروسات قد تحملها هذه الرسالة._x000D__x000D_CONFIDENTIALITY NOTICE: This e-mail message, including any attachments, is for the sole use of the intended recipient(s) and may contain confidential and privileged information or otherwise protected by law. If you are not the intended recipient, you are notified that any unauthorized review, use, disclosure or distribution is strictly prohibited. please notify the sender by replying to this email and destroy all copies of the original message. Statements and opinions expressed in this Email are those of the sender, and do not necessarily reflect those of Ministry of Health (MOH). Ministry of Health (MOH) accepts no liability for damage caused by any virus transmitted by this Email._x000D__x000D__x000D_MOH Site. <http://www.moh.gov.sa>_x000D_[attachment name=image001.jpg]
+    ```
 
-  ```
-  *** This is an external email. Be Vigilant and take precautions.***_x000D_*** Do not click links or open attachments or reply unless you recognize the sender and their email address,
-   and you are expecting the email.***_x000D__x000D__x000D_نفيد سعادتكم بوجود مشكله في جهاز عيادة العظام_x000D_حيث انه لا يمكن الدخول وفتح الجهاز بيوزر موظف وزاره الصحة_x000D__x000D_نوع الجهاز : DEEL OPTIPLEX 3080_x000D_رقم الجهاز : DLH0PJ3_x000D__x000D_برجاء الاطلاع وتوجيه المختصين ليدكم لحل المشكلة_x000D__x000D_ولكم جزيل الشكر 
-   ،،،،_x000D__x000D__x000D__x000D_مدير تقنية المعلومات بمستشفى السليل العام_x000D_منصور بن عبدالله الحابي_x000D_0556355578_x000D__x000D__x000D_[MANSOUR ABDULLAH AL-HABI (2)]_x000D__x000D__x000D__x000D__x000D__x000D_تنبيه بإخلاء المسئولية: هذه الرسالة ومرفقاتها معدة لاستخدام المُرسَل إليه المقصود بالرسالة فقط و قد تحتوي على معلومات سرية أو محمية قانونيا. إن لم تكن الشخص المقصود، فإنه يُمنع منعا باتا أي عرض أو نشر أو استخدام غير مصرح به للمحتوى. نرجو إخطار المُرسِل عن طريق الرد على هذا
-    البريد الإلكتروني وإتلاف جميع النسخ الموجودة لديك. تعد التصريحات و الآراء المذكورة في الرسالة خاصة بالمُرسِل و لا تمثل وزارة الصحة. كما لا تتحمل الوزارة مسؤولية الأضرار الناتجة عن أي فيروسات قد تحملها هذه
-     الرسالة._x000D__x000D_CONFIDENTIALITY NOTICE: This e-mail message, including any attachments, is for the sole use of the intended recipient(s) and may contain confidential and privileged information or otherwise protected by law. If you are not the intended recipient, you are notified that any unauthorized review, use, disclosure or distribution is strictly prohibited. please notify the sender by replying to this email and destroy all copies of the original message. Statements and opinions expressed in this Email are those of the sender, and do not necessarily reflect 
-    those of Ministry of Health (MOH). Ministry of Health (MOH) accepts no liability for damage caused by any virus transmitted by this Email._x000D__x000D__x000D_MOH Site. <http://www.moh.gov.sa>_x000D_[attachment name=image001.jpg]
-  ```
 
-  AFTER-> Cleaning:
+  After Cleaning:
   df_process["Request Detail"][0]
-  ```
-   نفيد سعادتكم بوجود مشكله في جهاز عياده العظام حيث انه لا يمكن الدخول وفتح الجهاز بيوزر موظف وزاره الصحه نوع الجهاز رقم الجهاز برجاء الاطلاع وتوجيه المختصين ليدكم لحل المشكله ولكم جزيل الشكر مدير تقنيه المعلومات بمستشفي السليل العام منصور بن عبدالله
-    الحابي تنبيه باخلاء المسءوليه هذه الرساله ومرفقاتها معده لاستخدام المرسل اليه المقصود
-     بالرساله فقط و قد تحتوي علي معلومات سريه او محميه قانونيا ان لم تكن الشخص المقصود فانه يمنع منعا باتا اي عرض او نشر او استخدام غير مصرح به للمحتوي نرجو اخطار المرسل عن طريق الرد علي هذا البريد الالكتروني واتلاف جميع النسخ الموجوده لديك تعد التصريحات و الاراء
-    المذكوره في الرساله خاصه بالمرسل و لا تمثل وزاره الصحه كما لا تتحمل الوزاره مسءوليه الاضرار الناتجه عن اي فيروسات قد تحملها هذه الرساله 
-  ```
-<summary><b>2. Exploratory Data Analysis (EDA)</b>
+    ```
+   نفيد سعادتكم بوجود مشكله في جهاز عياده العظام حيث انه لا يمكن الدخول وفتح الجهاز بيوزر موظف وزاره الصحه نوع الجهاز رقم الجهاز برجاء الاطلاع وتوجيه المختصين ليدكم لحل المشكله ولكم جزيل الشكر مدير تقنيه المعلومات بمستشفي السليل العام منصور بن عبدالله الحابي تنبيه باخلاء المسءوليه هذه الرساله ومرفقاتها معده لاستخدام المرسل اليه المقصود بالرساله فقط و قد تحتوي علي معلومات سريه او محميه قانونيا ان لم تكن الشخص المقصود فانه يمنع منعا باتا اي عرض او نشر او استخدام غير مصرح به للمحتوي نرجو اخطار المرسل عن طريق الرد علي هذا البريد الالكتروني واتلاف جميع النسخ الموجوده لديك تعد التصريحات و الاراء المذكوره في الرساله خاصه بالمرسل و لا تمثل وزاره الصحه كما لا تتحمل الوزاره مسءوليه الاضرار الناتجه عن اي فيروسات قد تحملها هذه الرساله 
+    ```
 
-  1. Count Values in Subject
-<img src="asset/Value_C_Subject.png">
-The charts show that the majority of issues arise from computers and printers. It’s essential to classify these as distinct categories. Prioritizing these will improve issue resolution. 
-The bar chart displays the frequency of different subjects in the dataset. 
-The x-axis represents the unique subjects and the y-axis indicates the number of occurrences of each subject.
-The subject with the highest frequency is '{fig.data[0].x[0]}' with a count of {fig.data[0].y[0]}. 
-Other subjects with notable counts include '{fig.data[0].x[1]}', '{fig.data[0].x[2]}', and so on.
+<details>
+  <summary><b>2. Exploratory Data Analysis (EDA)</b></summary>
+  Perform EDA to understand the distribution of the data, the presence of missing values, and the need for data cleaning. Use visualizations and statistical techniques to uncover patterns and insights from the dataset.
+</details>
 
-
-
-<summary><b>3. Dimensionality Reduction</b></summary>
+<details>
+  <summary><b>3. Dimensionality Reduction</b></summary>
   Apply dimensionality reduction techniques such as Principal Component Analysis (PCA) or t-SNE to visualize the data in a lower-dimensional space. This helps in understanding the inherent structure of the data and identifying clusters or outliers.
+</details>
 
 <details>
   <summary><b>4. Feature Engineering</b></summary>
@@ -66,82 +55,33 @@ Other subjects with notable counts include '{fig.data[0].x[1]}', '{fig.data[0].x
   Implement a strategy to generate labels from the text data. The labels should reflect key discrepancies or noteworthy information derived from the "Request Detail" and "Notes" fields. Utilize techniques such as fuzzy matching, keyword extraction, Zero-shot classification, Few-shot classification and manual annotation where necessary.
 </details>
 
+<details>
+  <summary><b>6. Text Classification</b></summary>
+  Develop a machine learning model to classify the labeled data, ensuring high accuracy and relevance. Experiment with different classification models such as logistic regression, support vector machines, and deep learning models to find the best fit.
+</details>
 
-## 6. Text Classification with Model Evolution
-    Models:
-
-----------------------------------------------------------------------------------------------------------
-#### Model - 1
-    1.model_name ="CAMeL-Lab/bert-base-arabic-camelbert-ca-poetry"
-    Trained Text is A Combination fo Notes After transalte the needed infotmation from it , and Request Details
-    Mapping for these Part of Classes using PCA for it wiht kmeans and give a range from 2:20 to get the best 
-    and get the best intria_ at kmean=5
-    Classes: label_list_HARD = ['Hardware Issue', 'Network Problem', 'Software Problem', 'Power Supply Issue', 'Peripheral Issue']
-<img src="asset/arabic_CAmel_poetrymode.png">
-
-    pipe("نفيد سعادتكم بوجود مشكله جهاز عياده العظام الدخول وفتح الجهاز بيوزر موظف نوع الجهاز رقم الجهاز برجاء الاطلاع وتوجيه المختصين ليدكم لحل المشكله ولكم جزيل الشكر مدير تقنيه المعلومات بمستشفي السليل العام منصور عبدالله الحابي تنبيه باخلاء المسءوليه ومرفقاتها معده لاستخدام اليه بالرساله فقط تحتوي سريه محميه قانونيا تكن الشخص فانه يمنع منعا باتا عرض نشر استخدام مصرح للمحتوي اخطار الالكتروني واتلاف النسخ الموجوده لديك تعد التصريحات الاراء بالمرسل تمثل تتحمل مسءوليه الاضرار الناتجه فيروسات تحملها")
-    Results: 
-    [[{'label': 'Hardware Issue', 'score': 0.013072000816464424},
-    {'label': 'Network Problem', 'score': 0.009265456348657608},
-    {'label': 'Software Problem', 'score': 0.01583610288798809},
-    {'label': 'Power Supply Issue', 'score': 0.9559705257415771},
-    {'label': 'Peripheral Issue', 'score': 0.005855914205312729}]]
-    
-Add K-fold Training Steps:
-<img src="asset/kfold_results.png">
-<img src="asset/newplot.png">
-
-----------------------------------------------------------------------------------------------------------
-#### Model - 2
-    2.model_name="asafaya/bert-mini-arabic"
-    Trained Text is A Combination fo Notes After transalte the needed infotmation from it , and Request Details
-    Classes: label_list_HARD = ['Hardware Issue', 'Network Problem', 'Software Problem', 'Power Supply Issue', 'Peripheral Issue']
-<img src="asset/mini_arabert.png">
-
-----------------------------------------------------------------------------------------------------------
-#### Model - 3
-    3.model_name="asafaya/bert-mini-arabic" -> Meduim
-    Just Use the Request Details as my main sentences 
-    Use FuzzyWuzz Methods for making the classes and choose the nest part of it when number of classes = 9 in addition I balance the classes
-    Classes: label_list_HARD = [Printer Issues, Uncategorized, Miscellaneous, Computer Issues , Network Issues , Maintenance Requests , General Hardware Issues , Peripheral Device Issues , Security Alerts , Job Orders]
-
-<img src="asset/classes8.png">
-
-    Average ROUGE-1: 0.5867768595041323
-    Average ROUGE-2: 0.0
-    Average ROUGE-L: 0.5867768595041323
-    Average BLEU Score: 1.069008853310906e-231
-----------------------------------------------------------------------------------------------------------
-#### Model -4
-    4.model_name ="CAMeL-Lab/bert-base-arabic-camelbert-ca-poetry"
-    Just Use the Request Details as my main sentences 
-    Use FuzzyWuzz Methods for making the classes and choose the nest part of it when number of classes = 9 in addition I balance the classes
-    Classes: label_list_HARD = [Printer Issues, Uncategorized, Miscellaneous, Computer Issues , Network Issues , Maintenance Requests , General Hardware Issues , Peripheral Device Issues , Security Alerts , Job Orders]
-    
-<img src="asset/an_8.png">
-    
-    pipe("نفيد سعادتكم بوجود مشكله جهاز عياده العظام الدخول وفتح الجهاز بيوزر موظف نوع الجهاز رقم الجهاز برجاء الاطلاع وتوجيه المختصين ليدكم لحل المشكله ولكم جزيل الشكر مدير تقنيه المعلومات بمستشفي السليل العام منصور عبدالله الحابي تنبيه باخلاء المسءوليه ومرفقاتها معده لاستخدام اليه بالرساله فقط تحتوي سريه محميه قانونيا تكن الشخص فانه يمنع منعا باتا عرض نشر استخدام مصرح للمحتوي اخطار الالكتروني واتلاف النسخ الموجوده لديك تعد التصريحات الاراء بالمرسل تمثل تتحمل مسءوليه الاضرار الناتجه فيروسات تحملها")
-    Results:
-    [[{'label': 'Computer Issues', 'score': 0.14079122245311737},
-    {'label': 'Peripheral Device Issues', 'score': 0.004707982297986746},
-    {'label': 'Security Alerts', 'score': 0.019273553043603897},
-    {'label': 'Uncategorized', 'score': 0.05770004913210869},
-    {'label': 'Printer Issues', 'score': 0.05498286709189415},
-    {'label': 'Job Orders', 'score': 0.006223469041287899},
-    {'label': 'Network Issues', 'score': 0.014804959297180176},
-    {'label': 'Miscellaneous', 'score': 0.10969039797782898},
-    {'label': 'Maintenance Requests', 'score': 0.5517280697822571},
-    {'label': 'General Hardware Issues', 'score': 0.040097422897815704}]]
 
 <details>
   <summary><b>7. Model Evaluation</b></summary>
   Assess the performance of the model using standard evaluation metrics such as accuracy, F1-score, precision, and recall. Compare the predictions against a validation set of manually labeled data to measure the effectiveness of the model.
 </details>
 
+### Key Features
 
+<details>
+  <summary><b>1. Automated Labeling</b></summary>
+  Utilizes custom algorithms and techniques such as fuzzy matching, keyword extraction, and semantic analysis to generate labels for the text data. This helps in the efficient categorization of unstructured data and reduces manual effort.
+</details>
 
+<details>
+  <summary><b>2. NLP Techniques</b></summary>
+  Implements preprocessing steps like tokenization, stop-word removal, and word embeddings to handle the complexity of Arabic and English text. These techniques enable the extraction of meaningful features from the text, facilitating better model performance.
+</details>
 
-
+<details>
+  <summary><b>3. Model Evaluation</b></summary>
+  Employs metrics such as accuracy, F1-score, precision, and recall to validate the model's effectiveness in text classification. Detailed performance reports are generated to guide further improvements and refinements in the model.
+</details>
 ### Project Structure
 
 - `data/`: Contains the dataset (pre-labeled and raw).
@@ -163,10 +103,6 @@ Add K-fold Training Steps:
     pip install -r requirements.txt
     ```
 
-### Conclusion
-In this evaluation, I employed a lightweight model that demonstrated strong performance and is well-suited for deployment in a machine-based ticket support system. While more advanced models like GPT, LLaMA, or GEMMA variants (with over 7 billion parameters) offer higher capacity, they also come with significant computational overhead. For a task of this nature, which primarily involves text classification, such heavy models are not necessary.
-
-The BERT-based models used in this pipeline achieved satisfactory accuracy and evaluation metrics, making them an ideal balance between performance and resource efficiency. Therefore, deploying these lightweight BERT variants provides a practical and cost-effective solution without sacrificing accuracy or reliability in the classification task
 ### Contributing
 
 Contributions are welcome! Feel free to submit issues or pull requests if you have ideas for improvement or new features.
