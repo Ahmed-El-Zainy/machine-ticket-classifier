@@ -66,7 +66,7 @@ This repository contains a project focused on building a machine learning classi
     Models:
 
 ----------------------------------------------------------------------------------------------------------
-
+#### Model - 1
     1.model_name ="CAMeL-Lab/bert-base-arabic-camelbert-ca-poetry"
     Trained Text is A Combination fo Notes After transalte the needed infotmation from it , and Request Details
     Mapping for these Part of Classes using PCA for it wiht kmeans and give a range from 2:20 to get the best 
@@ -87,23 +87,46 @@ Add K-fold Training Steps:
 <img src="asset/newplot.png">
 
 ----------------------------------------------------------------------------------------------------------
-
+#### Model - 2
     2.model_name="asafaya/bert-mini-arabic"
     Trained Text is A Combination fo Notes After transalte the needed infotmation from it , and Request Details
     Classes: label_list_HARD = ['Hardware Issue', 'Network Problem', 'Software Problem', 'Power Supply Issue', 'Peripheral Issue']
 <img src="asset/mini_arabert.png">
 
 ----------------------------------------------------------------------------------------------------------
+#### Model - 3
     3.model_name="asafaya/bert-mini-arabic" -> Meduim
     Just Use the Request Details as my main sentences 
     Use FuzzyWuzz Methods for making the classes and choose the nest part of it when number of classes = 9 in addition I balance the classes
     Classes: label_list_HARD = [Printer Issues, Uncategorized, Miscellaneous, Computer Issues , Network Issues , Maintenance Requests , General Hardware Issues , Peripheral Device Issues , Security Alerts , Job Orders]
 
+<img src="asset/classes8.png">
+
+    Average ROUGE-1: 0.5867768595041323
+    Average ROUGE-2: 0.0
+    Average ROUGE-L: 0.5867768595041323
+    Average BLEU Score: 1.069008853310906e-231
 ----------------------------------------------------------------------------------------------------------
-    3.model_name="asafaya/bert-mini-arabic" -> MEDUIM
-    Use the 
-
-
+#### Model -4
+    4.model_name ="CAMeL-Lab/bert-base-arabic-camelbert-ca-poetry"
+    Just Use the Request Details as my main sentences 
+    Use FuzzyWuzz Methods for making the classes and choose the nest part of it when number of classes = 9 in addition I balance the classes
+    Classes: label_list_HARD = [Printer Issues, Uncategorized, Miscellaneous, Computer Issues , Network Issues , Maintenance Requests , General Hardware Issues , Peripheral Device Issues , Security Alerts , Job Orders]
+    
+<img src="asset/an_8.png">
+    
+    pipe("نفيد سعادتكم بوجود مشكله جهاز عياده العظام الدخول وفتح الجهاز بيوزر موظف نوع الجهاز رقم الجهاز برجاء الاطلاع وتوجيه المختصين ليدكم لحل المشكله ولكم جزيل الشكر مدير تقنيه المعلومات بمستشفي السليل العام منصور عبدالله الحابي تنبيه باخلاء المسءوليه ومرفقاتها معده لاستخدام اليه بالرساله فقط تحتوي سريه محميه قانونيا تكن الشخص فانه يمنع منعا باتا عرض نشر استخدام مصرح للمحتوي اخطار الالكتروني واتلاف النسخ الموجوده لديك تعد التصريحات الاراء بالمرسل تمثل تتحمل مسءوليه الاضرار الناتجه فيروسات تحملها")
+    Results:
+    [[{'label': 'Computer Issues', 'score': 0.14079122245311737},
+    {'label': 'Peripheral Device Issues', 'score': 0.004707982297986746},
+    {'label': 'Security Alerts', 'score': 0.019273553043603897},
+    {'label': 'Uncategorized', 'score': 0.05770004913210869},
+    {'label': 'Printer Issues', 'score': 0.05498286709189415},
+    {'label': 'Job Orders', 'score': 0.006223469041287899},
+    {'label': 'Network Issues', 'score': 0.014804959297180176},
+    {'label': 'Miscellaneous', 'score': 0.10969039797782898},
+    {'label': 'Maintenance Requests', 'score': 0.5517280697822571},
+    {'label': 'General Hardware Issues', 'score': 0.040097422897815704}]]
 
 <details>
   <summary><b>7. Model Evaluation</b></summary>
