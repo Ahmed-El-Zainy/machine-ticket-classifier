@@ -20,7 +20,7 @@ This repository contains a project focused on building a machine learning classi
   - (Optional) Apply Translation if Columns after cleaning most Values ' ' or empty values 
 
 
-  Before Cleaning:
+  BEFORE-> Cleaning:
     df_process["Request Detail"][0]
 
   ```
@@ -32,7 +32,7 @@ This repository contains a project focused on building a machine learning classi
     those of Ministry of Health (MOH). Ministry of Health (MOH) accepts no liability for damage caused by any virus transmitted by this Email._x000D__x000D__x000D_MOH Site. <http://www.moh.gov.sa>_x000D_[attachment name=image001.jpg]
   ```
 
-  After Cleaning:
+  AFTER-> Cleaning:
   df_process["Request Detail"][0]
   ```
    نفيد سعادتكم بوجود مشكله في جهاز عياده العظام حيث انه لا يمكن الدخول وفتح الجهاز بيوزر موظف وزاره الصحه نوع الجهاز رقم الجهاز برجاء الاطلاع وتوجيه المختصين ليدكم لحل المشكله ولكم جزيل الشكر مدير تقنيه المعلومات بمستشفي السليل العام منصور بن عبدالله
@@ -40,16 +40,20 @@ This repository contains a project focused on building a machine learning classi
      بالرساله فقط و قد تحتوي علي معلومات سريه او محميه قانونيا ان لم تكن الشخص المقصود فانه يمنع منعا باتا اي عرض او نشر او استخدام غير مصرح به للمحتوي نرجو اخطار المرسل عن طريق الرد علي هذا البريد الالكتروني واتلاف جميع النسخ الموجوده لديك تعد التصريحات و الاراء
     المذكوره في الرساله خاصه بالمرسل و لا تمثل وزاره الصحه كما لا تتحمل الوزاره مسءوليه الاضرار الناتجه عن اي فيروسات قد تحملها هذه الرساله 
   ```
+<summary><b>2. Exploratory Data Analysis (EDA)</b>
 
-<details>
-  <summary><b>2. Exploratory Data Analysis (EDA)</b></summary>
-  Perform EDA to understand the distribution of the data, the presence of missing values, and the need for data cleaning. Use visualizations and statistical techniques to uncover patterns and insights from the dataset.
-</details>
+  1. Count Values in Subject
+<img src="asset/Value_C_Subject.png">
+The charts show that the majority of issues arise from computers and printers. It’s essential to classify these as distinct categories. Prioritizing these will improve issue resolution. 
+The bar chart displays the frequency of different subjects in the dataset. 
+The x-axis represents the unique subjects and the y-axis indicates the number of occurrences of each subject.
+The subject with the highest frequency is '{fig.data[0].x[0]}' with a count of {fig.data[0].y[0]}. 
+Other subjects with notable counts include '{fig.data[0].x[1]}', '{fig.data[0].x[2]}', and so on.
 
-<details>
-  <summary><b>3. Dimensionality Reduction</b></summary>
+
+
+<summary><b>3. Dimensionality Reduction</b></summary>
   Apply dimensionality reduction techniques such as Principal Component Analysis (PCA) or t-SNE to visualize the data in a lower-dimensional space. This helps in understanding the inherent structure of the data and identifying clusters or outliers.
-</details>
 
 <details>
   <summary><b>4. Feature Engineering</b></summary>
