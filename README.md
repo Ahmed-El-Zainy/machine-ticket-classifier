@@ -1,5 +1,8 @@
 # Ticketing_system_Task
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1ZRzwdN7C--i8vFADslYDwpkPwQVLUGXb?usp=sharing)
+[![Open in Colab-AraBert-Mini-Meduim](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1ZRzwdN7C--i8vFADslYDwpkPwQVLUGXb?usp=sharing)
+
+
+[![Open in Colab-CAMeL-Poetry-Arabic](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1POiN7j0JmJDYupA-Vppr_qg_hNhEZ5A3?usp=sharing)
 
 --------------------------------
 ## Text-Based Machine Learning Classifier for Unlabeled Data
@@ -9,7 +12,7 @@ This repository contains a project focused on building a machine learning classi
 --------------------------------
 ### The primary objectives of this project are:
 
-<summary><b>1. Data Processing</b></summary>
+### 1. Data Processing</b></summary>
 
   Techniques:
   - Drop Unnamed: 0 column and Uneeded columns  - Apply Stemming and Lemmatization
@@ -35,23 +38,15 @@ After Cleaning:
    نفيد سعادتكم بوجود مشكله في جهاز عياده العظام حيث انه لا يمكن الدخول وفتح الجهاز بيوزر موظف وزاره الصحه نوع الجهاز رقم الجهاز برجاء الاطلاع وتوجيه المختصين ليدكم لحل المشكله ولكم جزيل الشكر مدير تقنيه المعلومات بمستشفي السليل العام منصور بن عبدالله الحابي تنبيه باخلاء المسءوليه هذه الرساله ومرفقاتها معده لاستخدام المرسل اليه المقصود بالرساله فقط و قد تحتوي علي معلومات سريه او محميه قانونيا ان لم تكن الشخص المقصود فانه يمنع منعا باتا اي عرض او نشر او استخدام غير مصرح به للمحتوي نرجو اخطار المرسل عن طريق الرد علي هذا البريد الالكتروني واتلاف جميع النسخ الموجوده لديك تعد التصريحات و الاراء المذكوره في الرساله خاصه بالمرسل و لا تمثل وزاره الصحه كما لا تتحمل الوزاره مسءوليه الاضرار الناتجه عن اي فيروسات قد تحملها هذه الرساله 
   ```
 
-<details>
-  <summary><b>2. Exploratory Data Analysis (EDA)</b></summary>
-  Perform EDA to understand the distribution of the data, the presence of missing values, and the need for data cleaning. Use visualizations and statistical techniques to uncover patterns and insights from the dataset.
-</details>
 
-<details>
-  <summary><b>3. Dimensionality Reduction</b></summary>
-  Apply dimensionality reduction techniques such as Principal Component Analysis (PCA) or t-SNE to visualize the data in a lower-dimensional space. This helps in understanding the inherent structure of the data and identifying clusters or outliers.
-</details>
+## 2. Exploratory Data Analysis (EDA)
 
-<details>
-  <summary><b>4. Feature Engineering</b></summary>
-  Explore various natural language processing (NLP) techniques to extract and preprocess features from the text data in both Arabic and English. Techniques may include tokenization, stop-word removal, word embeddings.
-</details>
+###  3. Dimensionality Reduction
+<img src="assets/asset/Value_C_Subject.png">
 
-<details>
-  <summary><b>5. Data Labeling</b></summary>
+### 4. Feature Engineering
+
+5. Data Labeling</b></summary>
   Implement a strategy to generate labels from the text data. The labels should reflect key discrepancies or noteworthy information derived from the "Request Detail" and "Notes" fields. Utilize techniques such as fuzzy matching, keyword extraction, Zero-shot classification, Few-shot classification and manual annotation where necessary.
 </details>
 
@@ -82,14 +77,17 @@ After Cleaning:
   <summary><b>3. Model Evaluation</b></summary>
   Employs metrics such as accuracy, F1-score, precision, and recall to validate the model's effectiveness in text classification. Detailed performance reports are generated to guide further improvements and refinements in the model.
 </details>
-### Project Structure
 
+
+### Project Structure
+```
 - `data/`: Contains the dataset (pre-labeled and raw).
 - `notebooks/`: Jupyter notebooks detailing the exploratory data analysis (EDA) and model development process.
 - `src/`: Source code for data preprocessing, model training, and evaluation scripts.
 - `results/`: Contains evaluation reports and visualizations of the model's performance.
 - `README.md`: Detailed instructions on how to run the project and interpret the results.
-
+```
+s
 ### Getting Started
 
 1. **Clone the Repository**:
