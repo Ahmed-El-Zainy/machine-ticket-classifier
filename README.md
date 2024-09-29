@@ -39,9 +39,13 @@ After Cleaning:
 
 
 ## 2. Exploratory Data Analysis (EDA)
+<img src="asset/Screenshot 2024-09-29 at 6.52.02 PM.png">
+
+* Word Cloud Mapping for the combine text of Reuest Details and Notes
+
 <img src="asset/Value_C_Subject.png">
 
-The charts show that the majority of issues arise from computers and printers. It’s essential to classify these as distinct categories. Prioritizing these will improve issue resolution. 
+* The charts show that the majority of issues arise from computers and printers. It’s essential to classify these as distinct categories. Prioritizing these will improve issue resolution. 
 The bar chart displays the frequency of different subjects in the dataset. 
 The x-axis represents the unique subjects and the y-axis indicates the number of occurrences of each subject.
 The subject with the highest frequency is '{fig.data[0].x[0]}' with a count of {fig.data[0].y[0]}. 
