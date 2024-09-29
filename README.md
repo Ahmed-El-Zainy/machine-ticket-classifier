@@ -51,8 +51,14 @@ The x-axis represents the unique subjects and the y-axis indicates the number of
 The subject with the highest frequency is '{fig.data[0].x[0]}' with a count of {fig.data[0].y[0]}. 
 Other subjects with notable counts include '{fig.data[0].x[1]}', '{fig.data[0].x[2]}', and so on.
 
+<img src="asset/Screenshot 2024-09-29 at 7.45.33 PM.png"> 
+
+* Distribution of the word count 
 
 
+<img src="asset/Screenshot 2024-09-29 at 7.50.00 PM.png">
+
+* Apply PCA to reduce the dimensionality of the data and show the cardinalty of the data
 
 ###  3. Dimensionality Reduction
 
