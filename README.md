@@ -162,6 +162,10 @@ Add K-fold Training Steps:
     pip install -r requirements.txt
     ```
 
+### Conclusion
+In this evaluation, I employed a lightweight model that demonstrated strong performance and is well-suited for deployment in a machine-based ticket support system. While more advanced models like GPT, LLaMA, or GEMMA variants (with over 7 billion parameters) offer higher capacity, they also come with significant computational overhead. For a task of this nature, which primarily involves text classification, such heavy models are not necessary.
+
+The BERT-based models used in this pipeline achieved satisfactory accuracy and evaluation metrics, making them an ideal balance between performance and resource efficiency. Therefore, deploying these lightweight BERT variants provides a practical and cost-effective solution without sacrificing accuracy or reliability in the classification task
 ### Contributing
 
 Contributions are welcome! Feel free to submit issues or pull requests if you have ideas for improvement or new features.
