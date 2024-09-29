@@ -13,6 +13,9 @@ pytorch_lightning
 farasapy==0.0.14
 pyarabic==0.6.14
 sentencepiece==0.1.96
+fuzzywuzzy
+rouge_score
+
 
 
 

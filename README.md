@@ -2,9 +2,8 @@
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1ZRzwdN7C--i8vFADslYDwpkPwQVLUGXb?usp=sharing)
 
 --------------------------------
-## Text-Based Machine Learning Classifier for Unlabeled Data
+## Text-Based LLM Classifier for Unlabeled Data
 This repository contains a project focused on building a machine learning classifier for text data. The dataset, provided in the form of an email attachment, includes records with no predefined labels. The goal of the project is to identify and assign meaningful labels based on the content of the "Request Detail" ,  "Notes" fields, "Subject", fields, "Subject_Eng" fields and "Request Type" fields which are predominantly in Arabic, though English may also be present.
-
 --------------------------------
 ### The primary objectives of this project are:
 
@@ -97,7 +96,7 @@ Add K-fold Training Steps:
 ----------------------------------------------------------------------------------------------------------
     3.model_name="asafaya/bert-mini-arabic" -> Meduim
     Just Use the Request Details as my main sentences 
-    Use FuzzyBuzzy Methods for making the classes and choose the nest part of it when number of classes = 9 in addition I balance the classes
+    Use FuzzyWuzz Methods for making the classes and choose the nest part of it when number of classes = 9 in addition I balance the classes
     Classes: label_list_HARD = [Printer Issues, Uncategorized, Miscellaneous, Computer Issues , Network Issues , Maintenance Requests , General Hardware Issues , Peripheral Device Issues , Security Alerts , Job Orders]
 
 ----------------------------------------------------------------------------------------------------------
