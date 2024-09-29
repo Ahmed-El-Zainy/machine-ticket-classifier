@@ -40,6 +40,7 @@ After Cleaning:
 
 ## 2. Exploratory Data Analysis (EDA)
 <img src="asset/Value_C_Subject.png">
+
 The charts show that the majority of issues arise from computers and printers. It’s essential to classify these as distinct categories. Prioritizing these will improve issue resolution. 
 The bar chart displays the frequency of different subjects in the dataset. 
 The x-axis represents the unique subjects and the y-axis indicates the number of occurrences of each subject.
