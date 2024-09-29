@@ -39,9 +39,17 @@ After Cleaning:
 
 
 ## 2. Exploratory Data Analysis (EDA)
+<img src="asset/Value_C_Subject.png">
+The charts show that the majority of issues arise from computers and printers. It’s essential to classify these as distinct categories. Prioritizing these will improve issue resolution. 
+The bar chart displays the frequency of different subjects in the dataset. 
+The x-axis represents the unique subjects and the y-axis indicates the number of occurrences of each subject.
+The subject with the highest frequency is '{fig.data[0].x[0]}' with a count of {fig.data[0].y[0]}. 
+Other subjects with notable counts include '{fig.data[0].x[1]}', '{fig.data[0].x[2]}', and so on.
+
+
+
 
 ###  3. Dimensionality Reduction
-<img src="assets/asset/Value_C_Subject.png">
 
 ### 4. Feature Engineering
 
