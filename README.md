@@ -1,10 +1,11 @@
 - [![Open in Colab - AraBert-Mini-Medium](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1ZRzwdN7C--i8vFADslYDwpkPwQVLUGXb?usp=sharing) - **AraBert-Mini-Medium**
 
-- [![Open in Colab - CAMeL-Poetry-Arabic](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1POiN7j0JmJDYupA-Vppr_qg_hNhEZ5A3?usp=sharing) - **CAMeL-Poetry-Arabic (Link 1)**
+- [![Open in Colab - CAMeL-Poetry-Arabic](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1POiN7j0JmJDYupA-Vppr_qg_hNhEZ5A3?usp=sharing) - **CAMeL-Poetry-Arabic**
 
-- [![Open in Colab - Llama-3.2-1B](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1DO8EyR_zanXakP_T6Llrv8h68oLOpxiB?usp=sharing) - **Llama-3.2-1b**
+- [![Open in Colab - Llama-3.2-1B](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1DO8EyR_zanXakP_T6Llrv8h68oLOpxiB?usp=sharing) - **Llama-3.2-1B**
 
-- [![Open in Colab - Llama-3.1-8B-Instruc](https://colab.research.google.com/drive/1nkK_ZCKYhPDdxn6WWgnhM8MBIG4D1iNo?usp=sharing) - **Llama-3.1-8B-Instruct**]
+
+- [![Open in Colab - Llama-3.1-8B-Instruct](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1nkK_ZCKYhPDdxn6WWgnhM8MBIG4D1iNo?usp=sharing) - **Llama-3.1-8B-Instruct**
 
 ---
 
