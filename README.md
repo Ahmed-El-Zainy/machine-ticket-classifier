@@ -83,12 +83,12 @@ Other subjects with notable counts include '{fig.data[0].x[1]}', '{fig.data[0].x
 * **Labeling with KMeans and PCA:**  
   I employed TF-IDF with 100 features, followed by Principal Component Analysis (PCA) with 2 components, and KMeans clustering. This approach resulted in 8 clusters, which were further labeled into 8 classes.
 
-  <img src="asset/download.png" height="500" width="700">
+  <img src="asset/download.png">
 
 * **Determining Optimal Clusters with the Elbow Method:**  
   To find the optimal number of clusters, I applied the elbow method, running KMeans across a range of 2 to 20 clusters. The best number of clusters was determined by identifying where the inertia (within-cluster variance) ceased to significantly decrease. Based on this, I selected 5 clusters, leading to 5 final classes.
 
-  <img src="asset/download (1).png" height="500" width="700">
+  <img src="asset/download (1).png">
 
 * **Zero-shot and Few-shot Classification with T5:**  
   For further classification, I utilized the T5 model in a zero-shot and few-shot setting, selecting around 5 to 6 candidate classes. You can review the implementation details in the accompanying code.
@@ -101,7 +101,7 @@ Other subjects with notable counts include '{fig.data[0].x[1]}', '{fig.data[0].x
 Trained Text is A Combination fo Notes After transalte the needed infotmation from it , and Request Details Classes: label_list_HARD = ['Hardware Issue', 'Network Problem', 'Software Problem', 'Power Supply Issue', 'Peripheral Issue']
   ```
 
-<img src="asset/mini_arabert.png" height="500" width="700">
+<img src="asset/mini_arabert.png">
 
   ```
   2- .mode l_name ="CAMeL-Lab/bert-base-arabic-camelbert-ca-poetry"
