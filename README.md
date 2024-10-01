@@ -93,9 +93,7 @@ Other subjects with notable counts include '{fig.data[0].x[1]}', '{fig.data[0].x
 * **Zero-shot and Few-shot Classification with T5:**  
   For further classification, I utilized the T5 model in a zero-shot and few-shot setting, selecting around 5 to 6 candidate classes. You can review the implementation details in the accompanying code.
 
----
-
-
+-----------------------------------
 ### 4.Text Classification
 #### 5 Classes:
   ```
@@ -103,12 +101,104 @@ Other subjects with notable counts include '{fig.data[0].x[1]}', '{fig.data[0].x
 Trained Text is A Combination fo Notes After transalte the needed infotmation from it , and Request Details Classes: label_list_HARD = ['Hardware Issue', 'Network Problem', 'Software Problem', 'Power Supply Issue', 'Peripheral Issue']
   ```
 
+<img src="asset/mini_arabert.png" height="500" width="700">
+
+  ```
+  2- .mode l_name ="CAMeL-Lab/bert-base-arabic-camelbert-ca-poetry"
+  Trained Text is A Combination fo Notes After transalte the needed infotmation from it , and Request DetailsMapping for these Part of Classes using PCA for it wiht kmeans and give a range from 2:20 to get the best and get the best intria_ at kmean=5
+  Classes: label_list_HARD = ['Hardware Issue', 'Network Problem', 'Software Problem', 'Power Supply Issue', 'Peripheral Issue']
+  ```
+  <img src="asset/arabic_CAmel_poetrymode.png">
+
+* I have try the training with KFold and get the following results
+<img src="asset/kfold_results.png">
+
+
+#### 10 Classes:
+  ```
+  3.model_name="asafaya/bert-mini-arabic" -> Meduim
+  Just Use the Request Details as my main sentences to train the model and get the following results
+  Use FuzzyWuzz Methods for making the classes and choose the nest part of it when number of classes = 10 in addition I balance the classes
+  Classes: label_list_HARD = [Printer Issues, Uncategorized, Miscellaneous, Computer Issues , Network Issues , Maintenance Requests , General Hardware Issues , Peripheral Device Issues , Security Alerts , Job Orders]
+  ```
+
+<img src="asset/classes8.png">
+<img src="asset/Screenshot 2024-09-29 at 8.51.46 PM.png">
+
+
+```
+  4.model_name ="CAMeL-Lab/bert-base-arabic-camelbert-ca-poetry"
+  Just Use the Request Details as my main sentences to train the model and get the following results
+  Use FuzzyWuzz Methods for making the classes and choose the nest part of it when number of classes = 10 in addition I balance the classes
+  Classes: label_list_HARD = [Printer Issues, Uncategorized, Miscellaneous, Computer Issues , Network Issues , Maintenance Requests , General Hardware Issues , Peripheral Device Issues , Security Alerts , Job Orders]
+  ```
+
+<img src="asset/an_8.png">
+  ```
+  5. Llama 3.2-instracut 1b for Text Classification 
+  Just Use the Request Details as my main sentences 
+  Use FuzzyWuzz Methods for making the classes and choose the nest part of it when number of classes = 10 in addition I balance the classes
+  Classes: label_list_HARD = [Printer Issues, Uncategorized, Miscellaneous, Computer Issues , Network Issues , Maintenance Requests , General Hardware Issues , Peripheral Device Issues , Security Alerts , Job Orders]
+  ```
+
+<img src="asset/Screenshot 2024-09-29 at 8.48.25 PM.png">
+<img src="asset/Screenshot 2024-09-29 at 8.50.37 PM.png">
+<img src="asset/Screenshot 2024-09-29 at 8.51.46 PM.png">
+
+  ```
+  6.Llama 3.1 7b for Text Classification 
+  ust Use the Request Details as my main sentences 
+  Use FuzzyWuzz Methods for making the classes and choose the nest part of it when number of classes = 10 in addition I balance the classes
+  Classes: label_list_HARD = [Printer Issues, Uncategorized, Miscellaneous, Computer Issues , Network Issues , Maintenance Requests , General Hardware Issues , Peripheral Device Issues , Security Alerts , Job Orders]
+  ```
+
+<img src="asset/Screenshot 2024-09-29 at 10.39.57 PM.png">
+<img src="asset/Screenshot 2024-09-29 at 10.40.57 PM.png">
 
 
 
 
+---
 
-### 5. Model Evaluation
+### 6. Evaluation
+
+**For 5 Classes:**
+
+Input Text (translated):  
+*We inform you of an issue with the orthopedic clinic device. The device cannot be accessed using the employee’s credentials. Please review and direct the appropriate personnel to resolve the issue. Thank you, Mansour Abdullah Al-Habi, IT Manager, Al-Salil General Hospital. This notice includes sensitive information, legally protected. Unauthorized disclosure, use, or duplication of this message is strictly prohibited.*
+
+**Results:**  
+| Label               | Confidence Score  |
+|---------------------|-------------------|
+| Power Supply Issue  | **0.956**          |
+| Software Problem    | 0.016              |
+| Hardware Issue      | 0.013              |
+| Network Problem     | 0.009              |
+| Peripheral Issue    | 0.006              |
+
+---
+
+**For 10 Classes:**
+
+Input Text (translated):  
+*We inform you of an issue with the orthopedic clinic device. The device cannot be accessed using the employee’s credentials. Please review and direct the appropriate personnel to resolve the issue. Thank you, Mansour Abdullah Al-Habi, IT Manager, Al-Salil General Hospital. This notice includes sensitive information, legally protected. Unauthorized disclosure, use, or duplication of this message is strictly prohibited.*
+
+**Results:**  
+| Label                    | Confidence Score  |
+|--------------------------|-------------------|
+| Maintenance Requests      | **0.552**          |
+| Computer Issues           | 0.141              |
+| Miscellaneous             | 0.110              |
+| Uncategorized             | 0.058              |
+| Printer Issues            | 0.055              |
+| Security Alerts           | 0.019              |
+| General Hardware Issues   | 0.040              |
+| Network Issues            | 0.015              |
+| Job Orders                | 0.006              |
+| Peripheral Device Issues  | 0.005              |
+
+---
+
 
 
 ### 6. Conclusion
