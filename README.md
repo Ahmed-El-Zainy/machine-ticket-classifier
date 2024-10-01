@@ -2,7 +2,6 @@
 [![Open in Colab-AraBert-Mini-Meduim](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1ZRzwdN7C--i8vFADslYDwpkPwQVLUGXb?usp=sharing) [![Open in Colab-CAMeL-Poetry-Arabic](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1POiN7j0JmJDYupA-Vppr_qg_hNhEZ5A3?usp=sharing)[![Open in Colab-CAMeL-Poetry-Arabic](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1DO8EyR_zanXakP_T6Llrv8h68oLOpxiB?usp=sharing)
 
 
-
 --------------------------------
 ## Text-Based Machine Learning Classifier for Unlabeled Data
 
@@ -93,68 +92,88 @@ Other subjects with notable counts include '{fig.data[0].x[1]}', '{fig.data[0].x
 * **Zero-shot and Few-shot Classification with T5:**  
   For further classification, I utilized the T5 model in a zero-shot and few-shot setting, selecting around 5 to 6 candidate classes. You can review the implementation details in the accompanying code.
 
------------------------------------
-### 4.Text Classification
-#### 5 Classes:
-  ```
--1 model_name="asafaya/bert-mini-arabic"
-Trained Text is A Combination fo Notes After transalte the needed infotmation from it , and Request Details Classes: label_list_HARD = ['Hardware Issue', 'Network Problem', 'Software Problem', 'Power Supply Issue', 'Peripheral Issue']
-  ```
 
-<img src="asset/mini_arabert.png">
+Here’s a more readable and structured version of your section on Text Classification:
 
-  ```
-  2- .mode l_name ="CAMeL-Lab/bert-base-arabic-camelbert-ca-poetry"
-  Trained Text is A Combination fo Notes After transalte the needed infotmation from it , and Request DetailsMapping for these Part of Classes using PCA for it wiht kmeans and give a range from 2:20 to get the best and get the best intria_ at kmean=5
-  Classes: label_list_HARD = ['Hardware Issue', 'Network Problem', 'Software Problem', 'Power Supply Issue', 'Peripheral Issue']
-  ```
-  <img src="asset/arabic_CAmel_poetrymode.png">
+---
 
-* I have try the training with KFold and get the following results
-<img src="asset/kfold_results.png">
+### 4. Text Classification
 
+#### 5 Classes
 
-#### 10 Classes:
-  ```
-  3.model_name="asafaya/bert-mini-arabic" -> Meduim
-  Just Use the Request Details as my main sentences to train the model and get the following results
-  Use FuzzyWuzz Methods for making the classes and choose the nest part of it when number of classes = 10 in addition I balance the classes
-  Classes: label_list_HARD = [Printer Issues, Uncategorized, Miscellaneous, Computer Issues , Network Issues , Maintenance Requests , General Hardware Issues , Peripheral Device Issues , Security Alerts , Job Orders]
-  ```
+1. **Model Name:** `asafaya/bert-mini-arabic`  
+   - **Training Data:** A combination of translated notes and request details.
+   - **Classes:** 
+     - Hardware Issue
+     - Network Problem
+     - Software Problem
+     - Power Supply Issue
+     - Peripheral Issue
 
-<img src="asset/classes8.png">
-<img src="asset/Screenshot 2024-09-29 at 8.51.46 PM.png">
+   <img src="asset/mini_arabert.png" alt="Model 1 Visualization">
 
+2. **Model Name:** `CAMeL-Lab/bert-base-arabic-camelbert-ca-poetry`  
+   - **Training Data:** Same as above (translated notes and request details).
+   - **Method:** Applied PCA with KMeans clustering, testing cluster ranges from 2 to 20 to find the optimal number of clusters. The best result was achieved with KMeans set to 5 clusters.
+   - **Classes:** 
+     - Hardware Issue
+     - Network Problem
+     - Software Problem
+     - Power Supply Issue
+     - Peripheral Issue
 
-```
-  4.model_name ="CAMeL-Lab/bert-base-arabic-camelbert-ca-poetry"
-  Just Use the Request Details as my main sentences to train the model and get the following results
-  Use FuzzyWuzz Methods for making the classes and choose the nest part of it when number of classes = 10 in addition I balance the classes
-  Classes: label_list_HARD = [Printer Issues, Uncategorized, Miscellaneous, Computer Issues , Network Issues , Maintenance Requests , General Hardware Issues , Peripheral Device Issues , Security Alerts , Job Orders]
-  ```
+   <img src="asset/arabic_CAmel_poetrymode.png" alt="Model 2 Visualization">
 
-<img src="asset/an_8.png">
-  ```
-  5. Llama 3.2-instracut 1b for Text Classification 
-  Just Use the Request Details as my main sentences 
-  Use FuzzyWuzz Methods for making the classes and choose the nest part of it when number of classes = 10 in addition I balance the classes
-  Classes: label_list_HARD = [Printer Issues, Uncategorized, Miscellaneous, Computer Issues , Network Issues , Maintenance Requests , General Hardware Issues , Peripheral Device Issues , Security Alerts , Job Orders]
-  ```
+* **K-Fold Training Results:**  
+   The training was conducted using K-Fold cross-validation, yielding the following results:
 
-<img src="asset/Screenshot 2024-09-29 at 8.48.25 PM.png">
-<img src="asset/Screenshot 2024-09-29 at 8.50.37 PM.png">
-<img src="asset/Screenshot 2024-09-29 at 8.51.46 PM.png">
+   <img src="asset/kfold_results.png" alt="KFold Results">
 
-  ```
-  6.Llama 3.1 7b for Text Classification 
-  ust Use the Request Details as my main sentences 
-  Use FuzzyWuzz Methods for making the classes and choose the nest part of it when number of classes = 10 in addition I balance the classes
-  Classes: label_list_HARD = [Printer Issues, Uncategorized, Miscellaneous, Computer Issues , Network Issues , Maintenance Requests , General Hardware Issues , Peripheral Device Issues , Security Alerts , Job Orders]
-  ```
+#### 10 Classes
 
-<img src="asset/Screenshot 2024-09-29 at 10.39.57 PM.png">
-<img src="asset/Screenshot 2024-09-29 at 10.40.57 PM.png">
+3. **Model Name:** `asafaya/bert-mini-arabic` (Medium)  
+   - **Training Data:** Only request details were used as the main sentences for training.
+   - **Method:** Applied FuzzyWuzz for class assignment, resulting in 10 classes. The data was balanced accordingly.
+   - **Classes:**
+     - Printer Issues
+     - Uncategorized
+     - Miscellaneous
+     - Computer Issues
+     - Network Issues
+     - Maintenance Requests
+     - General Hardware Issues
+     - Peripheral Device Issues
+     - Security Alerts
+     - Job Orders
 
+   <img src="asset/classes8.png" alt="Model 3 Visualization">  
+   <img src="asset/Screenshot 2024-09-29 at 8.51.46 PM.png" alt="Model 3 Additional Results">
+
+4. **Model Name:** `CAMeL-Lab/bert-base-arabic-camelbert-ca-poetry`  
+   - **Training Data:** Only request details were used as the main sentences for training.
+   - **Method:** Used FuzzyWuzz to generate and balance 10 classes.
+   - **Classes:** Same as model 3.
+
+   <img src="asset/an_8.png" alt="Model 4 Visualization">
+
+5. **Model Name:** `Llama 3.2-instruct 1b`  
+   - **Training Data:** Only request details were used as the main sentences.
+   - **Method:** Used FuzzyWuzz for class creation, and selected the top 10 classes. The data was balanced accordingly.
+   - **Classes:** Same as model 3.
+
+   <img src="asset/Screenshot 2024-09-29 at 8.48.25 PM.png" alt="Model 5 Visualization">  
+   <img src="asset/Screenshot 2024-09-29 at 8.50.37 PM.png" alt="Model 5 Additional Results">  
+   <img src="asset/Screenshot 2024-09-29 at 8.51.46 PM.png" alt="Model 5 Final Results">
+
+6. **Model Name:** `Llama 3.1 7b`  
+   - **Training Data:** Only request details were used as the main sentences.
+   - **Method:** Similar to previous models, used FuzzyWuzz to assign 10 classes and balanced the data accordingly.
+   - **Classes:** Same as model 3.
+
+   <img src="asset/Screenshot 2024-09-29 at 10.39.57 PM.png" alt="Model 6 Visualization">  
+   <img src="asset/Screenshot 2024-09-29 at 10.40.57 PM.png" alt="Model 6 Additional Results">
+
+---
 
 
 
