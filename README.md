@@ -214,7 +214,7 @@ The BERT-based models used in this pipeline achieved satisfactory accuracy and e
   - README.md: Detailed instructions on how to run the project and interpret the results.
 ```
 
-### 7.Getting Started
+### 8. Installation and Usage
 
 1. **Clone the Repository**:
     ```bash
