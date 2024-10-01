@@ -60,8 +60,41 @@ Other subjects with notable counts include '{fig.data[0].x[1]}', '{fig.data[0].x
 
 * Apply PCA to reduce the dimensionality of the data and show the cardinalty of the data
 
+<img src="asset/Screenshot 2024-09-29 at 7.42.01 PM.png"> 
+
+* Box Plot for Average Character per Word declared by Staus
+
+<img src="asset/newplot (2).png">
+
+* Correlation of Words between Subject And Request Detail, and there is a lack of correlation between Subject and Notes
+
+
+
+----------------------------------
 
 ### 3. Data Labeling
+
+* **Labeling with Fuzzy Matching (FuzzWuzz):**  
+  I applied fuzzy string matching using FuzzWuzz, which calculates the differences between sequences based on Levenshtein Distance. This helped me identify the most frequent words in the 'Notes' and 'Request Details' sections. From this process, I categorized the data into 10 distinct classes.
+
+* **Zero-shot Classification with XLM-Roberta-large-XNLI:**  
+  Using the XLM-Roberta-large-XNLI model, I performed zero-shot classification. Based on my understanding of the data, I initially proposed 6 candidate classes, which were then refined into final categories.
+
+* **Labeling with KMeans and PCA:**  
+  I employed TF-IDF with 100 features, followed by Principal Component Analysis (PCA) with 2 components, and KMeans clustering. This approach resulted in 8 clusters, which were further labeled into 8 classes.
+
+  <img src="asset/download.png" height="500" width="700">
+
+* **Determining Optimal Clusters with the Elbow Method:**  
+  To find the optimal number of clusters, I applied the elbow method, running KMeans across a range of 2 to 20 clusters. The best number of clusters was determined by identifying where the inertia (within-cluster variance) ceased to significantly decrease. Based on this, I selected 5 clusters, leading to 5 final classes.
+
+  <img src="asset/download (1).png" height="500" width="700">
+
+* **Zero-shot and Few-shot Classification with T5:**  
+  For further classification, I utilized the T5 model in a zero-shot and few-shot setting, selecting around 5 to 6 candidate classes. You can review the implementation details in the accompanying code.
+
+---
+
 
 ### 4.Text Classification
 #### 5 Classes:
