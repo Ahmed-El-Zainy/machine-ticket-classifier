@@ -37,19 +37,22 @@ This repository contains a project focused on building a machine learning classi
   - (Optional) Remove **outliers**.
   - (Optional) Apply **translation** if the majority of the cleaned values are empty or just whitespace.
 
-#### Before Cleaning:
-- **Original Text:**
+---
+
+#### Text Processing: Before and After Cleaning
+
+- **Before Cleaning:**
+  - The original text contains various artifacts, such as special characters, non-relevant details, and formatting issues:
   ```text
   *** This is an external email. Be Vigilant and take precautions.***
   نفيد سعادتكم بوجود مشكله في جهاز عيادة العظام_x000D_حيث انه لا يمكن الدخول وفتح الجهاز بيوزر موظف وزاره الصحة_x000D__x000D_نوع الجهاز : DEEL OPTIPLEX 3080_x000D_رقم الجهاز : DLH0PJ3_x000D__x000D_برجاء الاطلاع وتوجيه المختصين ليدكم لحل المشكلة...
   ```
 
-#### After Cleaning:
-- **Cleaned Text:**
+- **After Cleaning:**
+  - The cleaned text is simplified, with irrelevant details removed and the core message preserved:
   ```text
   نفيد سعادتكم بوجود مشكله في جهاز عياده العظام حيث انه لا يمكن الدخول وفتح الجهاز بيوزر موظف وزاره الصحه نوع الجهاز رقم الجهاز برجاء الاطلاع وتوجيه المختصين ليدكم لحل المشكله ولكم جزيل الشكر مدير تقنيه المعلومات بمستشفي السليل العام منصور بن عبدالله الحابي...
   ```
-
 
 --------------------------------
 
