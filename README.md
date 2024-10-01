@@ -41,14 +41,13 @@ This repository contains a project focused on building a machine learning classi
   *** This is an external email. Be Vigilant and take precautions.***
   نفيد سعادتكم بوجود مشكله في جهاز عيادة العظام_x000D_حيث انه لا يمكن الدخول وفتح الجهاز بيوزر موظف وزاره الصحة_x000D__x000D_نوع الجهاز : DEEL OPTIPLEX 3080_x000D_رقم الجهاز : DLH0PJ3_x000D__x000D_برجاء الاطلاع وتوجيه المختصين ليدكم لحل المشكلة...
   ```
-  (The original text contains a lot of noise like repeated "_x000D_", disclaimers, and contact details.)
 
 #### After Cleaning:
 - **Cleaned Text:**
   ```text
   نفيد سعادتكم بوجود مشكله في جهاز عياده العظام حيث انه لا يمكن الدخول وفتح الجهاز بيوزر موظف وزاره الصحه نوع الجهاز رقم الجهاز برجاء الاطلاع وتوجيه المختصين ليدكم لحل المشكله ولكم جزيل الشكر مدير تقنيه المعلومات بمستشفي السليل العام منصور بن عبدالله الحابي...
   ```
-  (The cleaned text removes all unnecessary parts such as disclaimers, links, personal information, and repeated patterns, leaving only the core message.)
+
 
 --------------------------------
 
@@ -111,7 +110,7 @@ Other subjects with notable counts include '{fig.data[0].x[1]}', '{fig.data[0].x
 
 Here’s a more readable and structured version of your section on Text Classification:
 
----
+--------------------------------
 
 ### 4. Text Classification
 
@@ -266,7 +265,3 @@ The BERT-based models used in this pipeline achieved satisfactory accuracy and e
 ### License
 
 This project is licensed under the MIT License.
-
---------------------------------
-
-This description should provide a clear and professional overview of the project, its goals, structure, and usage.
