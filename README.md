@@ -158,8 +158,7 @@ Trained Text is A Combination fo Notes After transalte the needed infotmation fr
 
 
 
----
-
+----------------------------------
 ### 6. Evaluation
 
 **For 5 Classes:**
@@ -206,15 +205,15 @@ In this evaluation, I employed a lightweight model that demonstrated strong perf
 
 The BERT-based models used in this pipeline achieved satisfactory accuracy and evaluation metrics, making them an ideal balance between performance and resource efficiency. Therefore, deploying these lightweight BERT variants provides a practical and cost-effective solution without sacrificing accuracy or reliability in the classification task
 
-### Project Structure
+### 7. Project Structure
 ```
-- `data/`: Contains the dataset (pre-labeled and raw).
-- `notebooks/`: Jupyter notebooks detailing the exploratory data analysis (EDA) and model development process.
-- `src/`: Source code for data preprocessing, model training, and evaluation scripts.
-- `results/`: Contains evaluation reports and visualizations of the model's performance.
-- `README.md`: Detailed instructions on how to run the project and interpret the results.
+  - data/: Contains the dataset (pre-labeled and raw).
+  - notebooks/: Jupyter notebooks detailing the exploratory data analysis (EDA) and model development process.
+  - src/: Source code for data preprocessing, model training, and evaluation scripts.
+  - results/: Contains evaluation reports and visualizations of the model's performance.
+  - README.md: Detailed instructions on how to run the project and interpret the results.
 ```
-s
+
 ### 7.Getting Started
 
 1. **Clone the Repository**:
@@ -228,14 +227,11 @@ s
     pip install -r requirements.txt
     ```
 
-### Contributing
-
-Contributions are welcome! Feel free to submit issues or pull requests if you have ideas for improvement or new features.
 
 ### License
 
 This project is licensed under the MIT License.
 
----
+--------------------------------
 
 This description should provide a clear and professional overview of the project, its goals, structure, and usage.
