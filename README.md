@@ -56,6 +56,11 @@ This repository contains a project focused on building a machine learning classi
 
 
 ## 2. Exploratory Data Analysis (EDA)
+---------------------------------
+
+<img src="asset/ezgif.com-animated-gif-maker_all.gif">
+--------------------------------
+
 <img src="asset/Screenshot 2024-09-29 at 6.52.02 PM.png">
 
 * Word Cloud Mapping for the combine text of Reuest Details and Notes
@@ -73,7 +78,7 @@ Other subjects with notable counts include '{fig.data[0].x[1]}', '{fig.data[0].x
 * Distribution of the word count 
 
 
-<img src="asset/Screenshot 2024-09-29 at 7.50.00 PM.png">
+<img src="asset/ezgif.com-animated-gif-maker_pca.gif">
 
 * Apply PCA to reduce the dimensionality of the data and show the cardinalty of the data
 
@@ -81,10 +86,11 @@ Other subjects with notable counts include '{fig.data[0].x[1]}', '{fig.data[0].x
 
 * Box Plot for Average Character per Word declared by Staus
 
-<img src="asset/newplot (2).png">
+<img src="asset/ezgif.com-animated-gif-maker.gif">
 
 * Correlation of Words between Subject And Request Detail, and there is a lack of correlation between Subject and Notes
 
+* The Correlation between Notes and Sbuject Details is pretty good to concatenate  together to give a hight correlation for the input text 
 
 
 ----------------------------------
