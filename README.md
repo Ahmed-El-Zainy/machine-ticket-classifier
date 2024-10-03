@@ -7,6 +7,7 @@
 
 - [![Open in Colab - Llama-3.1-8B-Instruct](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1nkK_ZCKYhPDdxn6WWgnhM8MBIG4D1iNo?usp=sharing) - **Llama-3.1-8B-Instruct**
 
+
 --------------------------------
 
 This repository contains a project focused on building a machine learning classifier for text data. The dataset, provided in the form of an email attachment, includes records with no predefined labels. The goal of the project is to identify and assign meaningful labels based on the content of the "Request Detail" ,  "Notes" fields, "Subject", fields, "Subject_Eng" fields and "Request Type" fields which are predominantly in Arabic, though English may also be present.
@@ -37,22 +38,19 @@ This repository contains a project focused on building a machine learning classi
   - (Optional) Remove **outliers**.
   - (Optional) Apply **translation** if the majority of the cleaned values are empty or just whitespace.
 
----
-
-#### Text Processing: Before and After Cleaning
-
-- **Before Cleaning:**
-  - The original text contains various artifacts, such as special characters, non-relevant details, and formatting issues:
+#### Before Cleaning:
+- **Original Text:**
   ```text
   *** This is an external email. Be Vigilant and take precautions.***
   نفيد سعادتكم بوجود مشكله في جهاز عيادة العظام_x000D_حيث انه لا يمكن الدخول وفتح الجهاز بيوزر موظف وزاره الصحة_x000D__x000D_نوع الجهاز : DEEL OPTIPLEX 3080_x000D_رقم الجهاز : DLH0PJ3_x000D__x000D_برجاء الاطلاع وتوجيه المختصين ليدكم لحل المشكلة...
   ```
 
-- **After Cleaning:**
-  - The cleaned text is simplified, with irrelevant details removed and the core message preserved:
+#### After Cleaning:
+- **Cleaned Text:**
   ```text
   نفيد سعادتكم بوجود مشكله في جهاز عياده العظام حيث انه لا يمكن الدخول وفتح الجهاز بيوزر موظف وزاره الصحه نوع الجهاز رقم الجهاز برجاء الاطلاع وتوجيه المختصين ليدكم لحل المشكله ولكم جزيل الشكر مدير تقنيه المعلومات بمستشفي السليل العام منصور بن عبدالله الحابي...
   ```
+
 
 --------------------------------
 
