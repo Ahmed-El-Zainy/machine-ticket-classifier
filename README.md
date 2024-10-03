@@ -64,7 +64,7 @@ This repository contains a project focused on building a machine learning classi
 
 <img src="asset/Screenshot 2024-09-29 at 6.52.02 PM.png">
 
-* Word Cloud Mapping for the combine text of Reuest Details and Notes
+* Word Cloud Mapping for the combine text of Request Details and Notes... and apply some outer stop words from a corpus in arabic
 
 <img src="asset/Value_C_Subject.png">
 
