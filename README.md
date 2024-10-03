@@ -59,6 +59,7 @@ This repository contains a project focused on building a machine learning classi
 ---------------------------------
 
 <img src="asset/ezgif.com-animated-gif-maker_all.gif">
+
 --------------------------------
 
 <img src="asset/Screenshot 2024-09-29 at 6.52.02 PM.png">
